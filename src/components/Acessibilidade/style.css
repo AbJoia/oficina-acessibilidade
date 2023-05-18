@@ -1,0 +1,35 @@
+@import url("../../Global.css");
+
+#secao-acessibilidade{
+    background-color: var(--cinza-claro);
+}
+
+#botao-acessibilidade{
+    border: none;
+    background: none;
+    padding: 5px;
+}
+
+#icone-acessibilidade{
+    width: 28px;        
+}
+
+#icone-contraste{
+    width: 24px;        
+}
+
+#lista-botoes{
+    width: 100%;    
+}
+
+#lista-botoes > li{
+    margin-left: 5px;
+}
+
+#container-botoes > button{
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: var(--vermelho);
+    color: var(--branco-primario);
+}

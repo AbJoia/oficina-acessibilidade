@@ -1,0 +1,40 @@
+@import url("../../Global.css");
+
+.header-container{    
+    box-shadow: 0.5px 0.5px 5px 0.5px var(--preto-primario);
+}
+
+#header-title{
+    color: var(--verde-primario);
+    font-size: 1.3rem;
+    font-weight: 400;  
+}
+
+#header-title span{
+    color: var(--preto-primario);
+    font-weight: 800;
+}
+
+div nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+div nav ul li > a:hover{
+    color: var(--verde-primario);
+}
+
+.elipse{
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--preto-primario);
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
