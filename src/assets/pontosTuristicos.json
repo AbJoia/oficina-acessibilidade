@@ -1,7 +1,7 @@
 [
     {
         "imagem":{
-            "url":"./src/assets/img/palacioDeCristal.jpg",
+            "nome":"palacioDeCristal",
             "alt":"Caminho de areia com bancos de madeira em suas extremidades, ao final do caminho uma construção em vidro com telhado branco com grandes lustres"
         },
         "titulo": "Palácio de Cristal",
@@ -9,7 +9,7 @@
     },
     {
         "imagem":{
-            "url":"./src/assets/img/museuImperial.jpg",
+            "nome":"museuImperial",
             "alt":"Construção em arquitetura colonial na cor vermelha e branco, com com janelas de vidro por toda sua extensão."
         },
         "titulo": "Museu Imperial",
@@ -17,7 +17,7 @@
     },
     {
         "imagem":{
-            "url":"./src/assets/img/serraDosOrgaos.jpg",
+            "nome":"serraDosOrgaos",
             "alt":"Paisagem ao entardecer. Ao fundo conjunto de montanhas com formações rochosas."
         },
         "titulo": "Serra dos Orgãos",

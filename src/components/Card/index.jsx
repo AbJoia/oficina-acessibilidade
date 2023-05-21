@@ -4,9 +4,13 @@ import { Card as CardBootstrap } from "react-bootstrap";
 
 import "./style.css";
 
-export function Card({ dado }) {
+export function Card({ dado, image }) {
   const {altoContraste} = useContext(ThemeContext);
 
+  function getImageUrl(path) {
+    return new URL(path, import.meta.url).href
+  } 
+  
   return (
     <CardBootstrap
       tabIndex={0}
@@ -17,7 +21,7 @@ export function Card({ dado }) {
       <CardBootstrap.Img className={altoContraste? "imagem-escala-cinza": ""}
         tabIndex={0}
         variant="top"
-        src={dado?.imagem.url}
+        src= {getImageUrl(image)}
         alt={dado?.imagem.alt}
       />
       <CardBootstrap.Body>

@@ -5,12 +5,13 @@ import { FormHotel } from "../../components/FormHotel";
 import { Secao } from "../../components/Secao";
 import { FormNewsletter } from "../../components/FormNewsletter";
 import { Footer } from "../../components/Footer";
-import {Acessibilidade} from "../../components/Acessibilidade";
+import { Acessibilidade } from "../../components/Acessibilidade";
 
 import pontosTuristicos from "../../assets/pontosTuristicos.json";
 import gastronomiaLocal from "../../assets/gastronomiaLocal.json";
 
 export function Home() {
+
   // useEffect(() => {
   //     const script = document.createElement("script");
   //     script.src = "/src/script.js";
@@ -21,7 +22,7 @@ export function Home() {
   return (
     <>
       <Header />
-      <Acessibilidade/>
+      <Acessibilidade />
       <Banner />
       <FormHotel />
       <Secao
@@ -31,8 +32,8 @@ export function Home() {
         backgroundColor="var(--backgroud-section-color)"
         aria-label="Seção pontos turísticos"
         tabIndex={0}
-        dados={pontosTuristicos}
-        accessKey='3'
+        dados={pontosTuristicos}   
+        accessKey="3"
       />
       <Secao
         id="gastronomia"
@@ -41,11 +42,11 @@ export function Home() {
         backgroundColor="var(--backgroud-section-color-variant)"
         aria-label="Seção gastronomica"
         tabIndex={0}
-        dados={gastronomiaLocal}
-        accessKey='4'
+        dados={gastronomiaLocal}      
+        accessKey="4"
       />
-      <FormNewsletter id="newsletter"/>
-      <Footer id="footer"/>
+      <FormNewsletter id="newsletter" />
+      <Footer id="footer" />
     </>
   );
 }
