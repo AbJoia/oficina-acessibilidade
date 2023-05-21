@@ -14,3 +14,7 @@
     background-color: var(--amarelo-primario); 
     margin: 1rem 0 1rem 0;       
 }
+
+.imagem-escala-cinza{
+    filter: grayscale(1);
+}

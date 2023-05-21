@@ -1,10 +1,11 @@
 @import url("../../Global.css");
 
 #secao-acessibilidade{
-    background-color: var(--cinza-claro);
+    background-color: var(--accessibility-background-color);
 }
 
 #botao-acessibilidade{
+    color: var(--font-color);
     border: none;
     background: none;
     padding: 5px;
@@ -32,4 +33,12 @@
     padding: 8px;
     background-color: var(--vermelho);
     color: var(--branco-primario);
+}
+
+#atalhos-navegacao ul li a{
+    color: var(--font-color);
+}
+
+#atalhos-navegacao ul li a:hover{
+    color: var(--hover-color);
 }

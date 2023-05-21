@@ -1,7 +1,7 @@
 @import url("../../Global.css");
 
 .container-form-hotel form{    
-    background-color: var(--branco-primario);
+    background-color: var(--backgroud-color);
     box-shadow: 0.5px 0.5px 5px 0.5px var(--preto-primario);   
     margin: auto;
     margin-top: -3.75rem;    
@@ -23,8 +23,8 @@
     width: 20.75rem;
     height: 2.70rem;
     border: none;
-    background-color: var(--verde-escuro);
-    color: var(--branco-primario);
+    background-color: var(--button-color);
+    color: var(--font-color-variant);
     transition: 0.2s;
 }
 

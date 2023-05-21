@@ -1,10 +1,14 @@
+import { useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import {ThemeContext} from "../../context/ThemeContext";
 
 import userIcon from "../../assets/img/usericon.svg";
 
 import "./style.css";
 
 export function Header() {
+  const {altoContraste} = useContext(ThemeContext)
+  
   return (
     <Container role="heading" fluid className="header-container">
       <Container>

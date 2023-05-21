@@ -1,12 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Container, Row, Col, Form } from "react-bootstrap";
 import { BiDownArrow, BiUpArrow } from "react-icons/bi";
 import iconeAcessibilidade from "../../assets/img/acessibilidadeIcon.png";
 import iconeContrasteBranco from "../../assets/img/contrastIconWhite.png";
+import { ThemeContext } from "../../context/ThemeContext";
 
 import "./style.css";
 
 export function Acessibilidade() {
+  const { altoContraste, handleSetAltoContraste } = useContext(ThemeContext);
   const [acessibilityIsOpen, setAcessibilityIsOpen] = useState(false);
   const [outlineIsActive, setOutlineIsActive] = useState(false);
   const selectors = "h1, h2, p, a, span, li, label, input, button";
@@ -29,6 +31,94 @@ export function Acessibilidade() {
     });
   }, [outlineIsActive]);
 
+  useEffect(() => {
+    if (altoContraste) {
+      document.documentElement.style.setProperty(
+        "--backgroud-color",
+        "var(--preto-primario)"
+      );
+      document.documentElement.style.setProperty(
+        "--font-color",
+        "var(--branco-primario)"
+      );
+      document.documentElement.style.setProperty(
+        "--font-color-variant",
+        "var(--preto-primario)"
+      );
+      document.documentElement.style.setProperty(
+        "--backgroud-section-color",
+        "var(--preto-primario)"
+      );
+      document.documentElement.style.setProperty(
+        "--backgroud-section-color-variant",
+        "var(--preto-primario)"
+      );
+      document.documentElement.style.setProperty(
+        "--title-color",
+        "var(--branco-primario)"
+      );
+      document.documentElement.style.setProperty(
+        "--title-color-variant",
+        "var(--amarelo-primario)"
+      );
+      document.documentElement.style.setProperty(
+        "--hover-color",
+        "var(--amarelo-primario)"
+      );
+      document.documentElement.style.setProperty(
+        "--accessibility-background-color",
+        "var(--preto-secundario)"
+      );
+      document.documentElement.style.setProperty(
+        "--button-color",
+        "var(--amarelo-primario)"
+      );
+      return;
+    }
+
+    document.documentElement.style.setProperty(
+      "--backgroud-color",
+      "var(--branco-primario)"
+    );
+    document.documentElement.style.setProperty(
+      "--font-color",
+      "var(--preto-primario)"
+    );
+    document.documentElement.style.setProperty(
+      "--font-color-variant",
+      "var(--branco-primario)"
+    );
+    document.documentElement.style.setProperty(
+      "--backgroud-section-color",
+      "var(--branco-primario)"
+    );
+    document.documentElement.style.setProperty(
+      "--backgroud-section-color-variant",
+      "var(--branco-secundario)"
+    );
+    document.documentElement.style.setProperty(
+      "--title-color",
+      "var(--verde-primario)"
+    );
+    document.documentElement.style.setProperty(
+      "--title-color-variant",
+      "var(--preto-primario)"
+    );
+    document.documentElement.style.setProperty(
+      "--hover-color",
+      "var(--verde-primario)"
+    );
+    document.documentElement.style.setProperty(
+      "--accessibility-background-color",
+      "var(--cinza-claro)"
+    );
+    document.documentElement.style.setProperty(
+      "--button-color",
+      "var(--verde-escuro)"
+    );
+    return;
+  }, [altoContraste]);
+
   function handleSetOutline(event) {
     if (
       (event.nativeEvent instanceof KeyboardEvent && event.key === "Enter") ||
@@ -46,8 +136,13 @@ export function Acessibilidade() {
         .getComputedStyle(element, null)
         .getPropertyValue("font-size")
         .split("px")[0];
-      element.style.fontSize = +value +updateValue + "px";
+      element.style.fontSize = +value + updateValue + "px";
     });
+  }
+
+  function handleTheme() {
+    handleSetAltoContraste(!altoContraste);
+    return;
   }
 
   return (
@@ -89,9 +184,9 @@ export function Acessibilidade() {
                 aria-checked={outlineIsActive}
                 type="switch"
                 label="Moldurar Elementos"
-                checked={outlineIsActive}               
+                checked={outlineIsActive}
                 aria-label="Ativar moldura mais destacadas aos elementos em foco"
-                onClick={(e) => handleSetOutline(e)}
+                onChange={(e) => handleSetOutline(e)}
                 onKeyDown={(e) => handleSetOutline(e)}
               />
               <div
@@ -114,7 +209,12 @@ export function Acessibilidade() {
                   +A
                 </button>
 
-                <button>
+                <button
+                  role="button"
+                  aria-label="Ativar alto contraste"
+                  aria-checked={altoContraste}
+                  onClick={handleTheme}
+                >
                   <img
                     id="icone-contraste"
                     src={iconeContrasteBranco}
@@ -123,29 +223,29 @@ export function Acessibilidade() {
                 </button>
               </div>
             </div>
-            <nav>
+            <nav id="atalhos-navegacao">
               <ul
                 tabIndex={0}
                 aria-label="Navegação por atalhos no teclado"
                 className="d-flex justify-content-center mt-3 flex-wrap gap-2"
               >
                 <li>
-                  <a href="#">Cabeçalho[1]</a>
+                  <a href="#header-title">Cabeçalho[1]</a>
                 </li>
                 <li>
-                  <a href="#">Buscar Hotéis[2]</a>
+                  <a href="#form-hotel">Buscar Hotéis[2]</a>
                 </li>
                 <li>
-                  <a href="#">Pontos Turísticos[3]</a>
+                  <a href="#pontos-turisticos">Pontos Turísticos[3]</a>
                 </li>
                 <li>
-                  <a href="#">Gastronomia[4]</a>
+                  <a href="#gastronomia">Gastronomia[4]</a>
                 </li>
                 <li>
-                  <a href="#">Newsletter[5]</a>
+                  <a href="#newsletter">Newsletter[5]</a>
                 </li>
                 <li>
-                  <a href="#">Rodapé[6]</a>
+                  <a href="#footer">Rodapé[6]</a>
                 </li>
               </ul>
             </nav>

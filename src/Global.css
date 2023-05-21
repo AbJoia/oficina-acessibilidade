@@ -20,6 +20,15 @@
 
   --backgroud-color: var(--branco-primario);
   --font-color: var(--preto-primario);
+  --font-color-variant: var(--branco-primario);
+  --backgroud-section-color: var(--branco-primario);
+  --backgroud-section-color-variant: var(--branco-secundario);
+  --title-color: var(--verde-primario);
+  --title-color-variant: var(--preto-primario);
+  --hover-color: var(--verde-primario);
+  --accessibility-background-color: var(--cinza-claro);
+  --button-color: var(--verde-escuro);
+  --button-color-variant: var(--amarelo-primario); 
 }
 
 html{

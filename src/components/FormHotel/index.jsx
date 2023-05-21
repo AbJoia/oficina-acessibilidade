@@ -29,6 +29,7 @@ export function FormHotel() {
       <Row>
         <Col>
           <form
+            id="form-hotel"
             tabIndex={0}
             accessKey="2"
             role="form"

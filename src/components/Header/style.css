@@ -5,13 +5,13 @@
 }
 
 #header-title{
-    color: var(--verde-primario);
+    color: var(--title-color);
     font-size: 1.3rem;
     font-weight: 400;  
 }
 
 #header-title span{
-    color: var(--preto-primario);
+    color: var(--title-color-variant);
     font-weight: 800;
 }
 
@@ -23,14 +23,19 @@ div nav ul{
     gap: 1rem;
 }
 
+div nav ul li > a{
+    color: var(--font-color);
+}
+
 div nav ul li > a:hover{
-    color: var(--verde-primario);
+    color: var(--hover-color);
 }
 
 .elipse{
     width: 36px;
     height: 36px;
     border: 1px solid var(--preto-primario);
+    background-color: var(--branco-primario);
     border-radius: 50%;
 
     display: flex;

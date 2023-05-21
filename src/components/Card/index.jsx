@@ -1,7 +1,12 @@
+import {useContext} from 'react';
+import { ThemeContext } from '../../context/ThemeContext';
 import { Card as CardBootstrap } from "react-bootstrap";
+
 import "./style.css";
 
 export function Card({ dado }) {
+  const {altoContraste} = useContext(ThemeContext);
+
   return (
     <CardBootstrap
       tabIndex={0}
@@ -9,7 +14,7 @@ export function Card({ dado }) {
       style={{ width: "22rem" }}
       className="mt-3 mt-xl-0 card"
     >
-      <CardBootstrap.Img
+      <CardBootstrap.Img className={altoContraste? "imagem-escala-cinza": ""}
         tabIndex={0}
         variant="top"
         src={dado?.imagem.url}

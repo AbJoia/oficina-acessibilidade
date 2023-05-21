@@ -28,7 +28,7 @@ export function Home() {
         id="pontos-turisticos"
         titulo="Descubra os pontos turísticos da região."
         descricao="Conheça a história que levou a região ser o que é hoje."
-        backgroundColor="#FFF"
+        backgroundColor="var(--backgroud-section-color)"
         aria-label="Seção pontos turísticos"
         tabIndex={0}
         dados={pontosTuristicos}
@@ -38,14 +38,14 @@ export function Home() {
         id="gastronomia"
         titulo="Descubra a gastronomia da região."
         descricao="Sabores tradicionais com influências de imigrantes europeus e da cultura local."
-        backgroundColor="#f2faf9"
+        backgroundColor="var(--backgroud-section-color-variant)"
         aria-label="Seção gastronomica"
         tabIndex={0}
         dados={gastronomiaLocal}
         accessKey='4'
       />
       <FormNewsletter id="newsletter"/>
-      <Footer/>
+      <Footer id="footer"/>
     </>
   );
 }
