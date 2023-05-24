@@ -31,7 +31,7 @@ export function FormHotel() {
           <form
             id="form-hotel"
             tabIndex={0}
-            accessKey="2"
+            accessKey="3"
             role="form"
             aria-label="Formulário para realizar buscas de hotéis na região serrana."
             className="p-3 d-none d-xl-block"

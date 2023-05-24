@@ -30,30 +30,30 @@ export function Banner() {
                 </p>
                 <Row>
                   <Col className="container-pessoas d-flex flex-direction-row gap-1 mt-3">
-                    <img src={perfil1} alt="" />
-                    <img src={perfil2} alt="" />
-                    <img src={perfil3} alt="" />
-                    <img src={perfil4} alt="" />
-                    <img src={perfil5} alt="" />
+                    <img src={perfil1} alt="Imagem de perfil de rede social" />
+                    <img src={perfil2} alt="Imagem de perfil de rede social" />
+                    <img src={perfil3} alt="Imagem de perfil de rede social" />
+                    <img src={perfil4} alt="Imagem de perfil de rede social" />
+                    <img src={perfil5} alt="Imagem de perfil de rede social" />
                   </Col>
                   <Col className="container-avaliacao d-flex flex-direction-row justify-content-between aling-items-center">
-                    <img src={estrelaVerde} alt="" />
+                    <img src={estrelaVerde} alt="null" />
                     <span tabIndex={0}>Avaliações</span>
                     <div className="d-flex flex-direction-row align-items-center gap-1">
                       <div className="background-estrela">
-                        <img src={estrelaBranca} alt="" />
+                        <img src={estrelaBranca} alt="null" />
                       </div>
                       <div className="background-estrela">
-                        <img src={estrelaBranca} alt="" />
+                        <img src={estrelaBranca} alt="null" />
                       </div>
                       <div className="background-estrela">
-                        <img src={estrelaBranca} alt="" />
+                        <img src={estrelaBranca} alt="null" />
                       </div>
                       <div className="background-estrela">
-                        <img src={estrelaBranca} alt="" />
+                        <img src={estrelaBranca} alt="null" />
                       </div>
                       <div className="background-estrela">
-                        <img src={estrelaBranca} alt="" />
+                        <img src={estrelaBranca} alt="null" />
                       </div>
                     </div>
                     <span tabIndex={0}>4.5 / 5</span>

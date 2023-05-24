@@ -230,22 +230,19 @@ export function Acessibilidade() {
                 className="d-flex justify-content-center mt-3 flex-wrap gap-2"
               >
                 <li>
-                  <a href="#header-title">Cabeçalho[1]</a>
+                  <a href="#pontos-turisticos">Pontos Turísticos[1]</a>
                 </li>
                 <li>
-                  <a href="#form-hotel">Buscar Hotéis[2]</a>
+                  <a href="#gastronomia">Gastronomia[2]</a>
+                </li>               
+                <li>
+                  <a href="#form-hotel">Buscar Hotéis[3]</a>
                 </li>
                 <li>
-                  <a href="#pontos-turisticos">Pontos Turísticos[3]</a>
+                  <a href="#newsletter">Newsletter[4]</a>
                 </li>
                 <li>
-                  <a href="#gastronomia">Gastronomia[4]</a>
-                </li>
-                <li>
-                  <a href="#newsletter">Newsletter[5]</a>
-                </li>
-                <li>
-                  <a href="#footer">Rodapé[6]</a>
+                  <a href="#footer">Rodapé[5]</a>
                 </li>
               </ul>
             </nav>

@@ -40,7 +40,7 @@ export function FormNewsletter({id}) {
             <Form
               id={id}
               role="form"
-              accessKey="5"
+              accessKey="4"
               aria-label="Formulário para assinatura de newsletter."
               tabIndex={0}
               onSubmit={(e) => handleSubmitForm(e)}

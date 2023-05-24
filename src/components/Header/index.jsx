@@ -14,7 +14,7 @@ export function Header() {
       <Container>
         <Row className="d-flex flex-lg-row p-1 justify-content-center">
           <Col className="d-flex mt-2 flex-row align-items-center justify-content-center justify-content-lg-start">
-            <p tabIndex={0} accessKey="1" id="header-title">
+            <p tabIndex={0} id="header-title">
               SERRA<span>TOUR</span>
             </p>
           </Col>

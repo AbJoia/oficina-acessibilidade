@@ -4,7 +4,7 @@ import "./style.css";
 
 export function Footer({id}){
     return(
-        <Container tabIndex={0} id={id} accessKey="6" fluid className="footer-container">
+        <Container tabIndex={0} id={id} accessKey="5" fluid className="footer-container">
             <Row>
                 <Col className="d-flex p-3 justify-content-center align-items-center">
                     <span tabIndex={0}>Ciclo de palestras Residência em TIC Software 2023.1</span>

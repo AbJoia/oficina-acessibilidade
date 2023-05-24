@@ -33,7 +33,7 @@ export function Home() {
         aria-label="Seção pontos turísticos"
         tabIndex={0}
         dados={pontosTuristicos}   
-        accessKey="3"
+        accessKey="1"
       />
       <Secao
         id="gastronomia"
@@ -43,7 +43,7 @@ export function Home() {
         aria-label="Seção gastronomica"
         tabIndex={0}
         dados={gastronomiaLocal}      
-        accessKey="4"
+        accessKey="2"
       />
       <FormNewsletter id="newsletter" />
       <Footer id="footer" />
