@@ -1,22 +1,27 @@
 import { useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import {ThemeContext} from "../../context/ThemeContext";
+import { ThemeContext } from "../../context/ThemeContext";
 
 import userIcon from "../../assets/img/usericon.svg";
 
 import "./style.css";
 
 export function Header() {
-  const {altoContraste} = useContext(ThemeContext)
-  
+  const { altoContraste } = useContext(ThemeContext);
+
   return (
-    <Container role="heading" fluid className="header-container">
+    <Container fluid className="header-container">
       <Container>
         <Row className="d-flex flex-lg-row p-1 justify-content-center">
           <Col className="d-flex mt-2 flex-row align-items-center justify-content-center justify-content-lg-start">
-            <p tabIndex={0} id="header-title">
-              SERRA<span>TOUR</span>
-            </p>
+            <a
+              href="#pontos-turisticos"
+              aria-label="Saltar para o conteúdo principal"
+            >
+              <p tabIndex={0} id="header-title">
+                SERRA<span>TOUR</span>
+              </p>
+            </a>
           </Col>
           <Col className="d-flex mt-2 align-items-center justify-content-center justify-content-lg-end">
             <nav role="navigation">
