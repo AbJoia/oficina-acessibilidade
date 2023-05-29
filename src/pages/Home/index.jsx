@@ -11,14 +11,6 @@ import pontosTuristicos from "../../assets/pontosTuristicos.json";
 import gastronomiaLocal from "../../assets/gastronomiaLocal.json";
 
 export function Home() {
-
-  // useEffect(() => {
-  //     const script = document.createElement("script");
-  //     script.src = "/src/script.js";
-  //     script.async = true;
-  //     document.body.appendChild(script);
-  // }, [])
-
   return (
     <>
       <Header />
