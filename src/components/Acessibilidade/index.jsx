@@ -147,8 +147,7 @@ export function Acessibilidade() {
 
   return (
     <Container
-      fluid
-      tabIndex={0}
+      fluid      
       id="secao-acessibilidade"
       role="menuitem"
       aria-label="Seção de configurações de acessibilidade."
@@ -159,8 +158,7 @@ export function Acessibilidade() {
           className="d-flex justify-content-center justify-content-xl-between flex-wrap"
         >
           <nav id="atalhos-navegacao">
-            <ul
-              tabIndex={0}
+            <ul              
               aria-label="Navegação por atalhos no teclado"
               className="d-flex justify-content-center mt-3 flex-wrap gap-2"
             >
@@ -199,7 +197,7 @@ export function Acessibilidade() {
           <div id="container-botoes">
             <button
               role="button"
-              aria-label="Diminuir tamanho do texto."
+              aria-label="(-A) Diminuir tamanho do texto."
               onClick={() => handleFontSize(-1)}
             >
               -A
@@ -207,7 +205,7 @@ export function Acessibilidade() {
 
             <button
               role="button"
-              aria-label="Aumentar tamanho do texto."
+              aria-label="(+A) Aumentar tamanho do texto."
               onClick={() => handleFontSize(1)}
             >
               +A
@@ -216,7 +214,7 @@ export function Acessibilidade() {
             <button
               role="button"
               aria-label="Ativar alto contraste"
-              aria-checked={altoContraste}
+              aria-pressed={altoContraste}
               onClick={handleTheme}
             >
               <img
