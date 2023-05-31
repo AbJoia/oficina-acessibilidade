@@ -28,10 +28,8 @@ export function FormHotel() {
     <Container className="container-form-hotel mb-5 m-auto">
       <Row>
         <Col>
-          <form
-            id="form-hotel"
-            tabIndex={0}
-            accessKey="3"
+          <form            
+            tabIndex={0}          
             role="form"
             aria-label="Formulário para realizar buscas de hotéis na região serrana."
             className="p-3 d-none d-xl-block"

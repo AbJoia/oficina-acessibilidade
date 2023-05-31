@@ -27,10 +27,18 @@
     margin-left: 5px;
 }
 
+#container-botoes{
+    display: flex;
+    gap: 0.2rem;
+}
+
 #container-botoes > button{
     border: none;
     border-radius: 5px;
     padding: 8px;
+    height: 40px;
+    width: 40px;
+    font-size: 17px !important;    
     background-color: var(--vermelho);
     color: var(--branco-primario);
 }

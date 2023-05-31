@@ -18,7 +18,7 @@ export function Banner() {
           <Container className="conteudo-banner mt-5">
             <Row>
               <Col lg={6} className="p-4">
-                <h1 tabIndex={0}>
+                <h1 tabIndex={0} id="conteudo" accessKey="1">
                   Os melhores passeios gastronômicos e pontos turísticos da{" "}
                   <span>serra</span>.
                 </h1>

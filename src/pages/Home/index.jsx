@@ -13,8 +13,8 @@ import gastronomiaLocal from "../../assets/gastronomiaLocal.json";
 export function Home() {
   return (
     <>
-      <Header />
       <Acessibilidade />
+      <Header />
       <Banner />
       <FormHotel />
       <Secao
@@ -24,8 +24,7 @@ export function Home() {
         backgroundColor="var(--backgroud-section-color)"
         aria-label="Seção pontos turísticos"
         tabIndex={0}
-        dados={pontosTuristicos}   
-        accessKey="1"
+        dados={pontosTuristicos}        
       />
       <Secao
         id="gastronomia"
@@ -34,11 +33,10 @@ export function Home() {
         backgroundColor="var(--backgroud-section-color-variant)"
         aria-label="Seção gastronomica"
         tabIndex={0}
-        dados={gastronomiaLocal}      
-        accessKey="2"
+        dados={gastronomiaLocal}       
       />
-      <FormNewsletter id="newsletter" />
-      <Footer id="footer" />
+      <FormNewsletter />
+      <Footer />
     </>
   );
 }

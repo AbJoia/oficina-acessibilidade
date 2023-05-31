@@ -148,107 +148,86 @@ export function Acessibilidade() {
   return (
     <Container
       fluid
+      tabIndex={0}
       id="secao-acessibilidade"
       role="menuitem"
       aria-label="Seção de configurações de acessibilidade."
     >
-      <Container>
-        <Row>
-          <Col className="d-flex justify-content-center justify-content-xl-start align-items-center">
-            <img
-              id="icone-acessibilidade"
+      <Row>
+        <Col
+          xl={8}
+          className="d-flex justify-content-center justify-content-xl-between flex-wrap"
+        >
+          <nav id="atalhos-navegacao">
+            <ul
               tabIndex={0}
-              src={iconeAcessibilidade}
-              alt="null"
-            />
-            <button
-              id="botao-acessibilidade"
-              tabIndex={0}
-              role="button"
-              aria-label="Abrir opções de acessibilidade."
-              aria-pressed={acessibilityIsOpen ? "true" : "false"}
-              onClick={(e) => setAcessibilityIsOpen(!acessibilityIsOpen)}
+              aria-label="Navegação por atalhos no teclado"
+              className="d-flex justify-content-center mt-3 flex-wrap gap-2"
             >
-              Acessibilidade{" "}
-              {acessibilityIsOpen ? <BiUpArrow /> : <BiDownArrow />}
+              <li>
+                <a href="#conteudo">Ir para conteúdo[1]</a>
+              </li>
+              <li>
+                <a href="#menu">Ir para menu[2]</a>
+              </li>
+              <li>
+                <a href="#footer">Ir para rodapé[3]</a>
+              </li>
+            </ul>
+          </nav>
+        </Col>
+        <Col
+          xl={4}
+          className="d-flex justify-content-center gap-3 justify-content-xl-between align-items-center mb-2 mb-xl-0 flex-wrap"
+        >
+          <img
+            id="icone-acessibilidade"
+            tabIndex={0}
+            src={iconeAcessibilidade}
+            alt="Icone mundial de acessibilidade."
+          />
+          <Form.Switch
+            tabIndex={0}
+            aria-checked={outlineIsActive}
+            type="switch"
+            label="Moldurar Elementos"
+            checked={outlineIsActive}
+            aria-label="Ativar moldura mais destacadas aos elementos em foco"
+            onChange={(e) => handleSetOutline(e)}
+            onKeyDown={(e) => handleSetOutline(e)}
+          />
+          <div id="container-botoes">
+            <button
+              role="button"
+              aria-label="Diminuir tamanho do texto."
+              onClick={() => handleFontSize(-1)}
+            >
+              -A
             </button>
-          </Col>
-        </Row>
-      </Container>
-      <Container>
-        <Row className={acessibilityIsOpen ? "d-block" : "d-none"}>
-          <Col className="d-flex justify-content-center justify-content-xl-between flex-wrap">
-            <div className="p-2">
-              <Form.Switch
-                tabIndex={0}
-                aria-checked={outlineIsActive}
-                type="switch"
-                label="Moldurar Elementos"
-                checked={outlineIsActive}
-                aria-label="Ativar moldura mais destacadas aos elementos em foco"
-                onChange={(e) => handleSetOutline(e)}
-                onKeyDown={(e) => handleSetOutline(e)}
+
+            <button
+              role="button"
+              aria-label="Aumentar tamanho do texto."
+              onClick={() => handleFontSize(1)}
+            >
+              +A
+            </button>
+
+            <button
+              role="button"
+              aria-label="Ativar alto contraste"
+              aria-checked={altoContraste}
+              onClick={handleTheme}
+            >
+              <img
+                id="icone-contraste"
+                src={iconeContrasteBranco}
+                alt="Icone para alterar contraste."
               />
-              <div
-                id="container-botoes"
-                className="d-flex justify-content-xl-start justify-content-center gap-2 mb-2 mt-2"
-              >
-                <button
-                  role="button"
-                  aria-label="Diminuir tamanho do texto."
-                  onClick={() => handleFontSize(-1)}
-                >
-                  -A
-                </button>
-
-                <button
-                  role="button"
-                  aria-label="Aumentar tamanho do texto."
-                  onClick={() => handleFontSize(1)}
-                >
-                  +A
-                </button>
-
-                <button
-                  role="button"
-                  aria-label="Ativar alto contraste"
-                  aria-checked={altoContraste}
-                  onClick={handleTheme}
-                >
-                  <img
-                    id="icone-contraste"
-                    src={iconeContrasteBranco}
-                    alt="Icone para alterar contraste."
-                  />
-                </button>
-              </div>
-            </div>
-            <nav id="atalhos-navegacao">
-              <ul
-                tabIndex={0}
-                aria-label="Navegação por atalhos no teclado"
-                className="d-flex justify-content-center mt-3 flex-wrap gap-2"
-              >
-                <li>
-                  <a href="#pontos-turisticos">Pontos Turísticos[1]</a>
-                </li>
-                <li>
-                  <a href="#gastronomia">Gastronomia[2]</a>
-                </li>               
-                <li>
-                  <a href="#form-hotel">Buscar Hotéis[3]</a>
-                </li>
-                <li>
-                  <a href="#newsletter">Newsletter[4]</a>
-                </li>
-                <li>
-                  <a href="#footer">Rodapé[5]</a>
-                </li>
-              </ul>
-            </nav>
-          </Col>
-        </Row>
-      </Container>
+            </button>
+          </div>
+        </Col>
+      </Row>
     </Container>
   );
 }

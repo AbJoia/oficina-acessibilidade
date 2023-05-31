@@ -14,18 +14,13 @@ export function Header() {
       <Container>
         <Row className="d-flex flex-lg-row p-1 justify-content-center">
           <Col className="d-flex mt-2 flex-row align-items-center justify-content-center justify-content-lg-start">
-            <a
-              href="#pontos-turisticos"
-              aria-label="Saltar para o conteúdo principal"
-            >
-              <p tabIndex={0} id="header-title">
-                SERRA<span>TOUR</span>
-              </p>
-            </a>
+            <p tabIndex={0} id="header-title">
+              SERRA<span>TOUR</span>
+            </p>
           </Col>
           <Col className="d-flex mt-2 align-items-center justify-content-center justify-content-lg-end">
-            <nav role="navigation">
-              <ul>
+            <nav role="navigation" id="menu">
+              <ul tabIndex={0} accessKey="2">
                 <li>
                   <a href="#pontos-turisticos">Pontos Turísticos</a>
                 </li>
