@@ -12,16 +12,16 @@ import "./style.css";
 
 export function Banner() {
   return (
-    <Container role="banner" fluid>
+    <Container fluid>
       <Row className="bg-dark">
         <Col className="linear-background">
           <Container className="conteudo-banner mt-5">
             <Row>
               <Col lg={6} className="p-4">
-                <h1 tabIndex={0} id="conteudo" accessKey="1">
+                <p tabIndex={0} id="titulo-banner">
                   Os melhores passeios gastronômicos e pontos turísticos da{" "}
                   <span>serra</span>.
-                </h1>
+                </p>
                 <p tabIndex={0}>
                   A Região Serrana do Rio de Janeiro é um dos destinos
                   turísticos mais procurados do Brasil por sua beleza natural,

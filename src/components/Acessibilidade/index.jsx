@@ -8,8 +8,7 @@ import { ThemeContext } from "../../context/ThemeContext";
 import "./style.css";
 
 export function Acessibilidade() {
-  const { altoContraste, handleSetAltoContraste } = useContext(ThemeContext);
-  const [acessibilityIsOpen, setAcessibilityIsOpen] = useState(false);
+  const { altoContraste, handleSetAltoContraste } = useContext(ThemeContext);  
   const [outlineIsActive, setOutlineIsActive] = useState(false);
   const selectors = "h1, h2, p, a, span, li, label, input, button";
   const outlineStyle =
