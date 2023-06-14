@@ -16,7 +16,7 @@ export function Banner() {
       <Row className="bg-dark">
         <Col className="linear-background">
           <Container className="conteudo-banner mt-5">
-            <Row>
+            <Row className="mb-5">
               <Col lg={6} className="p-4">
                 <p tabIndex={0} id="titulo-banner">
                   Os melhores passeios gastronômicos e pontos turísticos da{" "}
@@ -36,7 +36,7 @@ export function Banner() {
                     <img src={perfil4} alt="Imagem de perfil de rede social" />
                     <img src={perfil5} alt="Imagem de perfil de rede social" />
                   </Col>
-                  <Col className="container-avaliacao d-flex flex-direction-row justify-content-between aling-items-center">
+                  <Col className="container-avaliacao d-flex flex-direction-row justify-content-between aling-items-center flex-wrap">
                     <img src={estrelaVerde} alt="null" />
                     <span tabIndex={0}>Avaliações</span>
                     <div className="d-flex flex-direction-row align-items-center gap-1">

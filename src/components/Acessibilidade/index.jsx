@@ -10,7 +10,7 @@ import "./style.css";
 export function Acessibilidade() {
   const { altoContraste, handleSetAltoContraste } = useContext(ThemeContext);  
   const [outlineIsActive, setOutlineIsActive] = useState(false);
-  const selectors = "h1, h2, p, a, span, li, label, input, button";
+  const selectors = "h1, h2, p, a, span, li, label, input, button, .titulo";
   const outlineStyle =
     "*:focus{outline: 5px solid var(--azul-primario) !important};";
 
@@ -153,7 +153,7 @@ export function Acessibilidade() {
     >
       <Row>
         <Col
-          xl={8}
+          xl={6}
           className="d-flex justify-content-center justify-content-xl-between flex-wrap"
         >
           <nav id="atalhos-navegacao">
@@ -174,15 +174,17 @@ export function Acessibilidade() {
           </nav>
         </Col>
         <Col
-          xl={4}
-          className="d-flex justify-content-center gap-3 justify-content-xl-between align-items-center mb-2 mb-xl-0 flex-wrap"
+          xl={6}
+          className="d-flex justify-content-center justify-content-xl-end gap-3 align-items-center mb-2 mb-xl-0"
         >
-          <img
-            id="icone-acessibilidade"
-            tabIndex={0}
-            src={iconeAcessibilidade}
-            alt="Icone mundial de acessibilidade."
-          />
+          <div className="p-2">
+            <img
+              id="icone-acessibilidade"
+              tabIndex={0}
+              src={iconeAcessibilidade}
+              alt="Icone mundial de acessibilidade."
+            />
+          </div>
           <Form.Switch
             tabIndex={0}
             aria-checked={outlineIsActive}
