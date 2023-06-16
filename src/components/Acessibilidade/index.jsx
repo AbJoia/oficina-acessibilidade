@@ -198,6 +198,7 @@ export function Acessibilidade() {
           <div id="container-botoes">
             <button
               role="button"
+              id="diminuir"
               aria-label="(-A) Diminuir tamanho do texto."
               onClick={() => handleFontSize(-1)}
             >
