@@ -45,7 +45,7 @@ export function FormNewsletter({id}) {
               onSubmit={(e) => handleSubmitForm(e)}
               className="m-auto m-lg-0"
             >
-              <legend tabIndex={0}>Assine nossa newsletter</legend>
+              <legend tabIndex={0}>Informações pessoais</legend>
               <Form.Group className="mb-3" controlId="formGroupEmail">
                 <Form.Label>Nome Completo</Form.Label>
                 <Form.Control
