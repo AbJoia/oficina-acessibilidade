@@ -72,6 +72,10 @@ export function Acessibilidade() {
         "--button-color",
         "var(--amarelo-primario)"
       );
+      document.documentElement.style.setProperty(
+        "--default-border-color",
+        "var(--amarelo-primario)"
+      );
       return;
     }
 
@@ -114,6 +118,10 @@ export function Acessibilidade() {
     document.documentElement.style.setProperty(
       "--button-color",
       "var(--verde-escuro)"
+    );
+    document.documentElement.style.setProperty(
+      "--default-border-color",
+      "var(--preto-secundario)"
     );
     return;
   }, [altoContraste]);
