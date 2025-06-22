@@ -7,7 +7,7 @@ export function Footer({id}){
         <Container fluid className="footer-container">
             <Row>
                 <Col className="d-flex p-3 justify-content-center align-items-center">
-                    <span tabIndex={0}>Ciclo de palestras Residência em TIC Software 2023.1</span>
+                    <span tabIndex={0}>Ciclo de palestras Residência em TIC Software</span>
                 </Col>
             </Row>
         </Container>
