@@ -14,21 +14,21 @@ export function Acessibilidade() {
   const outlineStyle =
     "*:focus{outline: 5px solid var(--azul-primario) !important};";
 
-  useEffect(() => {
-    if (outlineIsActive) {
-      const styleTag = document.createElement("style");
-      styleTag.innerHTML = outlineStyle;
-      document.head.insertAdjacentElement("beforeend", styleTag);
-      return;
-    }
+  // useEffect(() => {
+  //   if (outlineIsActive) {
+  //     const styleTag = document.createElement("style");
+  //     styleTag.innerHTML = outlineStyle;
+  //     document.head.insertAdjacentElement("beforeend", styleTag);
+  //     return;
+  //   }
 
-    var elements = document.querySelectorAll("style");
-    elements.forEach((element) => {
-      if (element.innerHTML === outlineStyle) {
-        element.remove();
-      }
-    });
-  }, [outlineIsActive]);
+  //   var elements = document.querySelectorAll("style");
+  //   elements.forEach((element) => {
+  //     if (element.innerHTML === outlineStyle) {
+  //       element.remove();
+  //     }
+  //   });
+  // }, [outlineIsActive]);
 
   useEffect(() => {
     if (altoContraste) {
@@ -126,15 +126,15 @@ export function Acessibilidade() {
     return;
   }, [altoContraste]);
 
-  function handleSetOutline(event) {
-    if (
-      (event.nativeEvent instanceof KeyboardEvent && event.key === "Enter") ||
-      event.nativeEvent instanceof PointerEvent
-    ) {
-      setOutlineIsActive(!outlineIsActive);
-      return;
-    }
-  }
+  // function handleSetOutline(event) {
+  //   if (
+  //     (event.nativeEvent instanceof KeyboardEvent && event.key === "Enter") ||
+  //     event.nativeEvent instanceof PointerEvent
+  //   ) {
+  //     setOutlineIsActive(!outlineIsActive);
+  //     return;
+  //   }
+  // }
 
   function handleFontSize(updateValue) {
     var elements = document.querySelectorAll(selectors);
@@ -193,7 +193,7 @@ export function Acessibilidade() {
               alt="Icone mundial de acessibilidade."
             />
           </div>
-          <Form.Switch
+          {/*<Form.Switch
             tabIndex={0}
             aria-checked={outlineIsActive}
             type="switch"
@@ -202,7 +202,7 @@ export function Acessibilidade() {
             aria-label="Ativar moldura mais destacadas aos elementos em foco"
             onChange={(e) => handleSetOutline(e)}
             onKeyDown={(e) => handleSetOutline(e)}
-          />
+          />*/}
           <div id="container-botoes">
             <button
               role="button"
